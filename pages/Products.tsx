@@ -6,24 +6,24 @@ import { Box, Image } from "@chakra-ui/react";
 import useSWR from "swr";
 import Link from "next/link";
 
-type ItemsData = {
-  image: string;
-  id: number;
-  thumbnail: string;
-  title: string;
-  description: string;
-  brand: string;
-  price: number;
-};
+// type ItemsData = {
+//   image: string;
+//   id: number;
+//   thumbnail: string;
+//   title: string;
+//   description: string;
+//   brand: string;
+//   price: number;
+// };
 export default function Products() {
-  const { data, error } = useSWR<ItemsData[]>("/api/products/get");
+//   const { data, error } = useSWR<ItemsData[]>("/api/products/get");
   // console.log(data,"data");
 
   return (
     <Box p="50px" bg={"#e9eef0"}>
       <Heading>Products</Heading>
-      <Grid templateColumns="repeat(3, 1fr)" gap={25}>
-        {data?.map((items, i) => (
+<!--       <Grid templateColumns="repeat(3, 1fr)" gap={25}> -->
+<!--         {data?.map((items, i) => (
           <Box
             w={"100%"}
             key={i}
@@ -74,8 +74,8 @@ export default function Products() {
               </Box>
             </GridItem>
           </Box>
-        ))}
-      </Grid>
+        ))} -->
+// </Grid>
     </Box>
   );
 }
